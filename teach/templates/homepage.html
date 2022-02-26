@@ -1,5 +1,32 @@
-{% extends 'base,html' %}
+{% extends 'base.html' %}
 
 {% block content %}
-    <h1>Good morning</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                {% for i in my_todo %}
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-md-3">
+                              {{i.name}}
+                          </div>
+                          <div class="col-md-3">
+                              {{i.description}}
+                          </div>
+                          <div class="col-md-3">{{i.deadline}}</div>
+                          <div class="col-md-3">
+                                <button class="btn btn-outline-danger">Delete</button>
+                          </div>
+                      </div>
+                  </div>
+                {% endfor %}
+            </div>
+            <div class="col-md-2">
+               <button class="btn btn-outline-primary" type="submit">Add</button>
+            </div>
+        </div>
+    </div>
 {% endblock %}
+    <!-- retry -->
+
+   
