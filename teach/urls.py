@@ -1,8 +1,7 @@
-import imp
-from django.urls import URLPattern, path
+from django.urls import path
 from . import views
-from django.conf import settings
 
-URLPatterns = [
-    path('/', views.home, name='home')
+
+urlpatterns = [
+    path('', views.home, name='home')
 ]
