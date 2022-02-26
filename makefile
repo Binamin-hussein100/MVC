@@ -8,7 +8,7 @@ check:
 	python3 manage.py check
 
 migrations:
-	python manage.py makemigrations
+	python3 manage.py makemigrations
 
 shell:
 	python manage.py shell
