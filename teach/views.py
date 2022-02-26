@@ -15,6 +15,6 @@ def home(request):
             return redirect('home')
     else:
         tenant_form = AddTenant(request.POST)
-    return render(request,'homepage.html',{'my_todo':my_todo})
+    return render(request,'homepage.html',{'my_todo':my_todo,'tenant_form':tenant_form})
 
 
