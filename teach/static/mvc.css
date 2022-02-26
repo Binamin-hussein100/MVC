@@ -1,3 +1,26 @@
-*{
-    padding: 1%;
+
+#home{
+    padding: 2%;
+    background-color: rgb(236, 209, 174);
+    height: 100vh;
+}
+
+#tenant{
+    padding: 2%;
+    border: solid black 1px;
+    margin-top: 1%;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    box-shadow: -15px 17px 10px 0px rgba(0,0,0,0.36);
+    -webkit-box-shadow: -15px 17px 10px 0px rgba(0,0,0,0.36);
+    -moz-box-shadow: -15px 17px 10px 0px rgba(0,0,0,0.36);
+}
+
+#formy{
+    padding: 2%;
+    background-color: rgb(236, 209, 174);
+    box-shadow: -15px 17px 10px 0px rgba(247, 247, 247, 0.36);
+    -webkit-box-shadow: -15px 17px 10px 0px rgba(212, 212, 212, 0.36);
+    -moz-box-shadow: -15px 17px 10px 0px rgba(240, 240, 240, 0.979);
 }
