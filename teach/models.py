@@ -17,7 +17,7 @@ class Tenants(models.Model):
 
     tname = models.CharField(max_length=30)
     tmarital_status = models.CharField(max_length=10)
-    tdate_in = models.DateTimeField()
+    tdate_in = models.DateField()
     troom_type = models.CharField(max_length=300, choices=CHOICES)
     
 
