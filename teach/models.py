@@ -5,7 +5,7 @@ from django.db import models
 
 # Create your models here.
 
-class Tenants(models.Model):
+class Tenant(models.Model):
 
     CHOICES = (
         ('2 Br','Two bedroom'),
@@ -17,14 +17,14 @@ class Tenants(models.Model):
 
     tname = models.CharField(max_length=30)
     tmarital_status = models.CharField(max_length=10)
-    tdate_in = models.DateField()
+    tyear_in = models.IntegerField(default=2021)
     troom_type = models.CharField(max_length=300, choices=CHOICES)
     
 
     class Meta:
-        verbose_name = ('ToDo')
-        verbose_name_plural  = ("Todo")
+        verbose_name = ('Tenant')
+        verbose_name_plural  = ("Tenants")
     
     def __str__(self):
-        return self.name
+        return self.tname
 

@@ -7,5 +7,12 @@ from .models import *
 
 class AddTenant(forms.ModelForm):
     class Meta:
-        model = Tenants
-        fields = ("tname","tmarital_status","tdate_in","troom_type")
+        model = Tenant
+        fields = ("tname","tmarital_status","tyear_in","troom_type")
+        widget={
+            'resident': TextInput(attrs={
+                'class': "form-control",
+                'style': 'max-width: 300px;',
+                
+            }),
+        }
