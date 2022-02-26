@@ -4,7 +4,7 @@ from .models import *
 
 # Create your views here.
 def home(request):
-    my_todo = ToDo.objects.all()
+    my_todo = Tenants.objects.all()
     return render(request,'homepage.html',{'my_todo':my_todo})
 
 
