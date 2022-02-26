@@ -1,5 +1,10 @@
+import imp
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
 def home(request):
-    return render(request,'homepage.html')
+    my_todo = ToDo.objects.all()
+    return render(request,'homepage.html',{'my_todo':my_todo})
+
+
