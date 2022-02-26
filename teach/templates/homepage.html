@@ -1,21 +1,33 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="container">
+    <div id="home" class="container-fluid">
         <div class="row">
-            <div class="col-md-10">
+            <div class="col-md-12">
+                <h1><strong><u><u>TENANT TRACKER</u></u></strong></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div  class="col-md-10">
                 {% for i in tenant %}
-                  <div class="container-fluid">
+                  <div id="tenant" class="container">
                       <div class="row">
                           <div class="col-md-3">
                               <h5><strong><u>Name</u></strong></h5>
                               {{i.tname}}
                           </div>
-                          <div class="col-md-3">
-                                <h5><strong><u>Name</u></strong></h5>
+                          <div class="col-md-2">
+                                <h5><strong><u>Room type</u></strong></h5>
                                 {{i.troom_type}}
                           </div>
-                          <div class="col-md-3">{{i.deadline}}</div>
+                          <div class="col-md-2">
+                            <h5><strong><u>M.status</u></strong></h5>
+                              {{i.tmarital_status}}
+                        </div>
+                        <div class="col-md-2">
+                            <h5><strong><u>Year</u></strong></h5>
+                            {{i.tyear_in}}
+                        </div>
                           <div class="col-md-3">
                             <a href="/delete/{{i.id}}" class="btn btn-outline-danger">DELETE</a>
                           </div>
@@ -25,16 +37,16 @@
             </div>
             <div class="col-md-2">
               <!-- Button trigger modal -->
-                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModalCenter">
                     ADD TENANT
                 </button>
                 
                 <!-- Modal -->
                 <div style="padding: 2%;" class="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
+                    <div id="formy"  class="modal-content">
                        
-                        <div style="width: 50%;"  class="modal-body">
+                        <div style="width: 50%;" class="modal-body">
                             <!-- form start -->
                             <form action="{% url 'home' %}" class="" method="post" enctype="multipart/form-data">
                                 {% csrf_token %}
