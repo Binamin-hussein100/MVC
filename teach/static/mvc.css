@@ -2,7 +2,8 @@
 #home{
     padding: 2%;
     background-color: rgb(236, 209, 174);
-    height: 100vh;
+    height: auto;
+    width: auto;
 }
 
 #tenant{
