@@ -1,0 +1,1 @@
+web: gunicorn MVC.wsgi --log-file -
