@@ -23,6 +23,7 @@ class Tenant(models.Model):
 
     class Meta:
         verbose_name = ('Tenant')
+        ordering = ['-pk']
         verbose_name_plural  = ("Tenants")
     
     def __str__(self):
